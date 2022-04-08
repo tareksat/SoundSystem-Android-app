@@ -7,7 +7,7 @@ const Relay = (props) => {
       style={styles.container}
       onPress={() => {
         let val = 0;
-        if (props.port.value) {
+        if (props.port.status) {
           val = 0;
         } else {
           val = 1;
@@ -19,7 +19,7 @@ const Relay = (props) => {
 
       <View
         style={[
-          props.port.value ? styles.indicatorStyleOn : styles.indicatorStyleOff,
+          props.port.status ? styles.indicatorStyleOn : styles.indicatorStyleOff,
         ]}
       />
     </TouchableOpacity>
